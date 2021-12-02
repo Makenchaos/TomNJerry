@@ -9,7 +9,7 @@ public class Main {
         Scanner myScanner = new Scanner(System.in);
         Random rand = new Random();
 
-
+        System.out.println("Hello world");
 
         int Menu;
         System.out.println("1. Kasta tärning");

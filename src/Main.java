@@ -8,17 +8,21 @@ public class Main {
 
         Scanner myScanner = new Scanner(System.in);
         Random rand = new Random();
-        int dice_value = rand.nextInt(5 + 1);
-        System.out.println(dice_value);
 
+
+
+        int Menu;
+        System.out.println("1. Kasta tärning");
+        System.out.println("2. Avsluta program");
+        int intInput = myScanner.nextInt();
 
         boolean programRunning = true;
-        int Menu = 0;
-
         while (programRunning) {
-            switch (Menu) {
+            switch (intInput) {
                 case 1:
-                    System.out.println("1.Kasta tärning");
+                    myScanner.nextInt();
+                    System.out.println("Kastar tärning");
+                    int dice_value = rand.nextInt(6)+ 1;
                     if (dice_value == 1) {
                         System.out.println(dice_value);
                         System.out.println("Du gick 3 steg bakåt");
@@ -34,11 +38,10 @@ public class Main {
                     } else if (dice_value == 6) {
                         System.out.println("Godnatt!");
                     }
-
-
+                    break;
+                case 2: programRunning = false;
             }
         }
-
     }
 }
 
